@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- head info -->
+    <!-------------------- head info ----------------------->
     <meta charset="utf-8" />
     <meta name="description" content="webstudio" />
     <title>Web Studio (version 2.1)</title>
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- header -->
+    <!------------------------- header ------------------------->
     <header class="header container">
       <a href="./index.html" class="logo"
         ><span class="logo-item">Web</span>Studio</a
@@ -38,7 +38,7 @@
         </ul>
       </nav>
       <ul class="contact list">
-        <!-- Ссылка на адрес электронной почты  -->
+        <!------------------------- Ссылка на адрес электронной почты  ------------------------->
         <li class="item">
           <a class="mail-link" href="malito:info@devstudio.com">
             <svg class="icon-envelope">
@@ -47,7 +47,7 @@
             info@devstudio.com</a
           >
         </li>
-        <!-- Ссылка на телефонный номер -->
+        <!------------------------- Ссылка на телефонный номер ------------------------->
         <li class="item">
           <a class="tel-link" href="tel:+380961111111">
             <svg class="icon-smartphone">
@@ -58,7 +58,7 @@
         </li>
       </ul>
     </header>
-    <!-- герой-->
+    <!------------------------- герой ------------------------->
     <main>
       <section class="hero">
         <h1 class="hero-title">
@@ -68,10 +68,9 @@
         <button data-modal-open type="button" class="button-primary cursors">
           Заказать услугу
         </button>
-
-        <!-- кнопка модалки закончилась -->
+        <!------------------------- кнопка модалки закончилась ------------------------->
       </section>
-      <!-- main goal -->
+      <!------------------------- main goal ------------------------->
       <section class="section-goal">
         <div class="container">
           <ul class="main-goal list">
@@ -126,7 +125,7 @@
           </ul>
         </div>
       </section>
-      <!-- presentation-->
+      <!------------------------- presentation ------------------------->
       <section class="presentation-section">
         <div class="container">
           <h2 class="section-title our-work">Чем мы занимаемся</h2>
@@ -172,7 +171,7 @@
           </ul>
         </div>
       </section>
-      <!-- our team-->
+      <!------------------------- our team ------------------------->
       <section class="section-our-team">
         <div class="container">
           <h2 class="section-title our-team">Наша команда</h2>
@@ -412,16 +411,16 @@
               ><span class="logo-footer">Studio</span></a
             >
           </div>
-          <!-- adress-->
+          <!------------------------- adress ------------------------->
           <address class="address">г. Киев, пр-т Лес и Украинки, 26</address>
           <ul class="footer-contact list">
-            <!-- Ссылка на адрес электронной почты  -->
+            <!------------------------- Ссылка на адрес электронной почты ------------------------->
             <li class="item">
               <a class="mail-link" href="malito:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <!-- Ссылка на телефонный номер -->
+            <!------------------------- Ссылка на телефонный номер ------------------------->
             <li class="item">
               <a class="tel-link" href="tel:+380961111111">+38 099 111 11 11</a>
             </li>
@@ -460,9 +459,24 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <h2 class="footer-title">Подпишитесь на рассылку</h2>
+          <input
+            class="email-input"
+            type="text"
+            name="name"
+            placeholder="E-mail"
+          />
+          <button type="button" class="sing-button">
+            Подписаться
+            <svg class="icon">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
-    <!------------------------------------------Модалка------------------------------>
+    <!------------------------------- Модалка ------------------------------>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="modal-close">
@@ -470,6 +484,61 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="form">
+          <b class="form-tittle">Оставьте свои данные, мы вам перезвоним</b>
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              id="name"
+              autofocus
+              autocomplete="off"
+            />
+            <svg class="icon">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel" />
+            <svg class="icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="email">Почта</label>
+            <input
+              class="form-input"
+              type="email"
+              name="mail"
+              id="email"
+              autocomplete="on"
+            />
+            <svg class="icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <div class="form-field textarea">
+            <label for="comment">Комментарий</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <label class="check">
+            <input class="check-input" type="checkbox" />
+            <span class="check-box"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a class="link-doc" href="">Условия договора</a>
+          </label>
+          <button class="submit-button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./modal.js"></script>

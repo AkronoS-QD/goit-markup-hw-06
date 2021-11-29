@@ -50,7 +50,6 @@ p {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  /* outline: 2px solid coral; */
 }
 
 .list {
@@ -110,6 +109,7 @@ p {
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 
 .site-nav .link:hover,
@@ -165,6 +165,7 @@ p {
   fill: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 
 .icon-envelope {
@@ -203,7 +204,7 @@ p {
   background-position: 50% 50%;
 }
 
-/* hero title web */
+/* -----------------------------hero title web--------------- */
 .hero-title {
   width: auto;
   margin-bottom: 30px;
@@ -264,12 +265,14 @@ p {
   background-color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 
 .button-primary:hover,
 .button-primary:focus {
-  color: var(--title-text-color);
-  background-color: var(--primary-white-color);
+  background-color: #1976d2;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ------icon - main goal------ */
@@ -363,10 +366,6 @@ p {
 .presentation-description {
   display: flex;
   position: absolute;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* padding: auto;
-  margin: 0; */
   min-width: 205px;
   bottom: 6%;
   right: -6%;
@@ -469,7 +468,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* outline: 1px solid green; */
 }
 
 .company-link {
@@ -543,6 +541,7 @@ p {
   letter-spacing: 0.03em;
   color: #212121;
   outline: none;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -567,6 +566,8 @@ p {
   padding-top: 6px;
   padding-bottom: 6px;
   border: none;
+  background-color: var(--background-color-main);
+  border-radius: 4px;
 }
 
 /* ----------------------feature-list-------------------- */
@@ -723,7 +724,6 @@ p {
 }
 
 .footer-net {
-  float: left;
   margin-left: 70px;
 }
 
@@ -775,7 +775,66 @@ p {
   fill: var(--primary-white-color);
 }
 
-/* --------------------------------modal---------------------------- */
+/* ------------------------------footer-subscribe----------------------------- */
+
+.footer-subscribe {
+  margin-left: 93px;
+}
+
+.email-input {
+  padding: 15px 16px;
+  min-width: 358px;
+  margin-right: 12px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--primary-white-color);
+}
+
+.email-input:focus {
+  color: var(--primary-white-color);
+  background-color: transparent;
+}
+
+.sing-button {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-right: 62px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  outline: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sing-button:hover,
+.sing-button:focus {
+  background-color: #1976d2;
+}
+.sing-button .icon {
+  position: absolute;
+  top: 30%;
+  right: 28px;
+  width: 24px;
+  height: 24px;
+}
+
+/* ----------------------------------------------modal------------------------------------ */
 
 .backdrop {
   position: fixed;
@@ -818,17 +877,8 @@ p {
   border-radius: 4px;
 }
 
-.modal-close .icon {
-  display: flex;
-  position: fixed;
-  top: 8px;
-  right: 8px;
-  width: 20px;
-  height: 20px;
-}
-
 .modal-close {
-  display: flex;
+  cursor: pointer;
   position: fixed;
   top: 3px;
   right: 3px;
@@ -839,4 +889,228 @@ p {
   justify-content: center;
   align-items: flex-end;
   outline: none;
+  z-index: 10;
+}
+
+.modal-close .icon {
+  display: flex;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close .icon:focus,
+.modal-close .icon:hover {
+  fill: var(--accent-color);
+}
+
+/* ------------------------------------форма----------------------------------------- */
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 528px;
+  height: 581px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.form-tittle {
+  display: block;
+  margin-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: var(--title-text-color);
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  color: var(--primary-text-color);
+}
+
+.form-field input {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field textarea {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-field textarea:focus {
+  border: 1px solid #2196f3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-field input:focus {
+  border: 1px solid #2196f3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-field textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea {
+  margin-bottom: 20px;
+}
+
+.form-field .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.comment {
+  padding: 12px 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-input ~ .icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input ~ .icon {
+  fill: var(--title-text-color);
+}
+
+.form-input:focus ~ .icon {
+  fill: var(--accent-color);
+}
+
+/* -----------------------------------check------------------------------ */
+
+.check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check-box {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-left: -10px;
+  margin-right: 7px;
+  border: 2px solid black;
+  border-radius: 4px;
+  transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* -------------------------checked--------------------------------- */
+
+.check-input:checked + .check-box {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url("../images/icon-check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+/* ------------------------ кнопка отправить -------------------------- */
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.submit-button {
+  display: block;
+  cursor: pointer;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  outline: none;
+  background-color: #1976d2;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.link-doc {
+  margin: 3px;
 }
